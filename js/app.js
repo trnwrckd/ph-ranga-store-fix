@@ -9,22 +9,24 @@ const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
-
-    console.log([product.image]);
-
     const div = document.createElement("div");
-    div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
-      <div>
-    <img class="product-image" src="${image}"></img>
+    div.classList.add("col");
+    div.innerHTML = `
+    <div class="single-product h-100 d-flex flex-column justify-content-between">
+      <div class="text-center">
+        <img class="product-image" src="${image}"></img>
       </div>
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h5> Rating: ${product.rating.rate} by ${product.rating.count} buyers </h5>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
-      `;
+      <div class = "mt-2">
+        <h3>${product.title}</h3>
+        <p>Category: ${product.category}</p>
+        <h5> Rating: ${product.rating.rate} by ${product.rating.count} buyers </h5>
+        <h2>Price: $ ${product.price}</h2>
+        <div>
+          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+          <button id="details-btn" class="btn btn-danger">Details</button>
+        </div>
+      </div>
+    </div>`;
     document.getElementById("all-products").appendChild(div);
   }
 };
