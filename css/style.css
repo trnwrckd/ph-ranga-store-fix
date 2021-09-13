@@ -1,7 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
-  background: #f6ffd0;
-  background: #fff2de;
+  background: #efefef;
   
 }
 th{
@@ -22,7 +21,7 @@ th{
   padding: 4px 0px;
   padding-left: 15px;
   display: flex;
-  background-color:rgba(255, 217, 221, 0.479);
+  background-color:rgba(255, 255, 255, 0.479);
   backdrop-filter: blur(10);
   z-index: 1;
   overflow: hidden;
@@ -37,7 +36,8 @@ th{
   top: 0;
   left: -100%;
   z-index: -1;
-  background: linear-gradient(90deg, #fff7ad,rgb(252, 208, 157));
+  background: linear-gradient(90deg, #feffb8d2,#daff8abe);
+  /* background: linear-gradient(90deg, #ffb1a3d2,#daff8abe); */
   transition: all .6s;
 }
 .search-field:hover::before{
@@ -74,12 +74,15 @@ th{
   padding: 10px;
   transition: 0.6s;
   border-radius: 8px;
-  box-shadow: 1px -1px 4px rgb(105, 87, 64);
+  box-shadow: 2px -2px 8px #A39393;
   background: white;
 
 }
 .single-product:hover {
-  box-shadow: -2px -2px 8px rgb(110, 32, 30);
+  box-shadow: -2px -2px 8px #83A38C;
+}
+.single-product:hover  .product-image{
+  transform: scale(1.05);
 }
 .single-product-info{
   position: relative;
@@ -88,6 +91,7 @@ th{
 .product-image {
   width: 200px;
   height: 200px;
+  transition: all 1s;
 }
 
 /* buttons on cards and cart */
@@ -102,11 +106,14 @@ th{
   transition: all .3s;
   overflow: hidden;
 }
+.custom-btn.add-btn{
+  background: rgb(250, 252, 136);
+}
 .custom-btn.buy-now{
-  background: rgb(255, 148, 129);
+  background: rgb(255, 131, 100);
 }
 .custom-btn.details{
-  background: rgb(131, 117, 255); 
+  background: #97c4ff; 
 }
 .custom-btn:hover{
   transform: scale(1.1);
@@ -115,8 +122,9 @@ th{
   position: absolute;
   content: '';
   width: 100%;
-  height: 100%;
+  height: 50%;
   background: white;
+  background: rgb(255, 255, 255);
   top: -100%;
   left: 0%;
   border-radius: 5px;
@@ -130,7 +138,7 @@ th{
   border: 2px solid rgb(63, 0, 122);
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.616);
+  background-color: rgba(251, 255, 197, 0.404);
   backdrop-filter: blur(2px);
   top: 40%;
   position: fixed;

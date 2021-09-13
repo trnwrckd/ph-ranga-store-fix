@@ -13,18 +13,18 @@ const showProducts = (products) => {
     div.classList.add("col");
     div.innerHTML = `
     <div class="single-product h-100 d-flex flex-column justify-content-between px-3">
-      <div class="text-center">
+      <div class="text-center overflow-hidden">
         <img class="product-image" src="${image}"></img>
       </div>
       <div class = "mt-2">
-        <h4 class="pb-1">${product.title}</h4>
+        <h5 class="pb-1">${product.title}</h5>
         <p class="mb-0 d-flex justify-content-between">
          <small>Category: <span class="text-success" style="cursor:pointer;">${product.category}</span></small>
-         <span class="d-flex align-items-center">${product.rating.rate} <span class="material-icons text-warning fs-5">&#xe838;</span>(${product.rating.count})</span>
+         <span class="d-flex align-items-center">${product.rating.rate} <span class="material-icons fs-5" style="color:orange;">&#xe838;</span>(${product.rating.count})</span>
         </p>
-        <h5 class="text-center py-2">Price: $ <span class="fw-bold">${product.price} </span></h5>
+        <h6 class="text-center py-2">Price: $ <span class="fw-bold">${product.price} </span></h6>
         <div class="d-flex justify-content-evenly pb-2">
-          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="custom-btn buy-now me-1">Add to cart</button>
+          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="custom-btn add-btn me-1">Add to cart</button>
           <button id="details-btn" class="ms-1 custom-btn details">Details</button>
         </div>
       </div>
