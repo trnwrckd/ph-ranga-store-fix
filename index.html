@@ -36,73 +36,75 @@
     </nav>
   </header>
 
-  <main class="main px-4 mb-5">
-    <h1 class="text-center pb-2"> Tukitaki Shop</h1>
+  <main class="main mb-5">
+    <!-- <h1 class="text-center pb-2"> Tukitaki Shop</h1> -->
     <!-- search field -->
-    <div class="pb-5 text-center">
-      <div class="d-flex justify-content-center align-items-center">
-        <div class="search-field">
-          <input id="input-field" type="text" placeholder="Search for a product" />
-          <button type="button" class="search-button" data-toggle="button" aria-pressed="false" autocomplete="off"
-            id="search-btn" onclick="loadProducts()"><span class="material-icons md-36 orange600">&#xe8b6;</span>
-          </button>
-
+    <div class="hero py-5 text-center">
+      <div class="d-flex justify-content-center py-5 align-items-center">
+        <div class="search-field d-flex justify-content-between">
+          <div><input id="input-field" type="text" placeholder="Search for a product" /></div>
+          <div><button type="button" class="search-button my-auto" data-toggle="button" aria-pressed="false"
+              autocomplete="off" id="search-btn" onclick="loadProducts()"><span
+                class="material-icons md-36 orange600">&#xe8b6;</span>
+            </button></div>
         </div>
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-lg-2 g-5">
+    <section class="px-4 mt-5">
+      <div class="row row-cols-1 row-cols-lg-2 g-5">
 
-      <!-- product conatiner -->
-      <div class="col-12 col-md-8 col-lg-9">
-        <div id="all-products" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-3 gy-5">
+        <!-- product conatiner -->
+        <div class="col-12 col-md-8 col-lg-9">
+          <div id="all-products" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-3 gy-5">
+          </div>
         </div>
-      </div>
 
-      <!-- cart -->
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="d-flex justify-content-center">
-          <div class="cart" id="my-cart">
-            <table class="table table-striped ">
-              <thead>
-                <h3 class="text-center">My-Cart</h3>
-                <tr>
-                  <td colspan="4"></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Total Added Products:</th>
-                  <td colspan="3"><span id="total-Products">0</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Price:</th>
-                  <td colspan="3">$ <span id="price">0</span></td>
-                  <!-- <td></td>
-                  <td></td> -->
-                </tr>
-                <tr>
-                  <th scope="row">Delivery-Charge:</th>
-                  <td colspan="3">$<span id="delivery-charge">20</span></td>
+        <!-- cart -->
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="d-flex justify-content-center">
+            <div class="cart" id="my-cart">
+              <table class="table table-striped ">
+                <thead>
+                  <h3 class="text-center">My-Cart</h3>
+                  <tr>
+                    <td colspan="4"></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Total Added Products:</th>
+                    <td colspan="3"><span id="total-Products">0</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Price:</th>
+                    <td colspan="3">$ <span id="price">0</span></td>
+                    <!-- <td></td>
+                    <td></td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Delivery-Charge:</th>
+                    <td colspan="3">$<span id="delivery-charge">20</span></td>
 
-                </tr>
-                <tr>
-                  <th>Total-Tax:</th>
-                  <td colspan="3">$ <span id="total-tax">0</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Total</th>
-                  <td colspan="3">$ <span id="total">0</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="text-center">
-              <button class="custom-btn buy-now">Buy Now</button>
+                  </tr>
+                  <tr>
+                    <th>Total-Tax:</th>
+                    <td colspan="3">$ <span id="total-tax">0</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                    <td colspan="3">$ <span id="total">0</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="text-center">
+                <button class="custom-btn buy-now">Buy Now</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
   <footer></footer>
 
