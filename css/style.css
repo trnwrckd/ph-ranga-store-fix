@@ -1,14 +1,16 @@
 body {
   font-family: "Montserrat", sans-serif;
   background: #efefef;
-  
+}
+main{
+  margin-top: 1px;
 }
 th{
   font-size: 14px;
 }
 
 .hero{
-  background: url('/assets/hero-web.png');
+  background: url('/assets/hero-lg.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -36,7 +38,7 @@ th{
   top: 0;
   left: -100%;
   z-index: -1;
-  background: linear-gradient(90deg, #feffb8d2,#daff8abe);
+  background: linear-gradient(90deg, #feffb3bd,#daff8abe);
   /* background: linear-gradient(90deg, #ffb1a3d2,#daff8abe); */
   transition: all .6s;
 }
@@ -62,7 +64,7 @@ th{
   top: 0;
   width: 35px;
   height: 35px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.774);
   backdrop-filter: blur(2px);
   border: none;
   display:block;
@@ -135,7 +137,7 @@ th{
   top:100%;
 }
 .cart {
-  border: 2px solid rgb(63, 0, 122);
+  border: 2px solid rgba(63, 0, 122, 0.521);
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(251, 255, 197, 0.404);
@@ -147,7 +149,7 @@ th{
 /* responsive */
 @media only screen and (max-width: 992px) {
   .hero{
-    background: url('/assets/hero-mobile.png');
+    background: url('/assets/hero-md.png');
     background-repeat: no-repeat;
   }
 }
